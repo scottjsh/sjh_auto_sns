@@ -14,7 +14,7 @@ class NeisLunchAPI(NeisAPI):
     def getTodayLunch(cls):
         todayLunch = (super(NeisLunchAPI, NeisLunchAPI)
                         .get(cls.NEIS_SERVICE_NAME, 
-                             {"MLSV_YMD": getToday("%Y%m%d")})
+                             {"MLSV_YMD": getToday("%Y0%m%d")})
                      )
         return cls(todayLunch)
     
