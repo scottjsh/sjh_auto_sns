@@ -11,7 +11,7 @@ load_dotenv()
 def addDateToImage(image: Image):
     textVO = TextVO(getToday("%m월 %d일 %w요일"), 
                 "static/font/esamanruBold.ttf", 
-                100)
+                91.8)
     image.addTextAlignX(textVO, 150)
     
 def addMenuToImage(image: Image, lunch):
@@ -24,8 +24,8 @@ def addMenuToImage(image: Image, lunch):
             menu = menu.split()
     
         for idx, dividedMenu in enumerate(menu):
-            textVO = TextVO(f"{'-  ' if idx == 0 else '    &'}{dividedMenu}", 
-                            "static/font/esamanruMedium.ttf", 84)
+            textVO = TextVO(f"{'·  ' if idx == 0 else '    &'}{dividedMenu}", 
+                            "static/font/esamanruMedium.ttf", 71.6)
             posVO = PosVO(125, currentPosY)
             image.addText(textVO, posVO)
             currentPosY += LEADING
